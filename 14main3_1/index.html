@@ -7,8 +7,24 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <script src="js/index.js"></script>
+
+    <div id="block">Test</div>
+    <p class="txt">1</p>
+    <p class="txt">2</p>
+    <p class="txt">3</p>
+
     <!-- <script src="jquery/jquery-3.7.1.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <!-- теперь при помощи jquery хотим выбрать "block".В теге <script> пишем 
+    $(обращаемся к jQuery),дальше # - вибираем эл-нт.И дальше какой эл-нт "block".
+    Потом идет ф-ия .hide() - скрывает эл-нт
+    Если зайти в консоле в Эл-ты,то будет прописано display: none(не показывает)  -->
+02.44
+    <script>
+
+    $("#block").hide();
+
+    </script>
 </body>
 </html>
