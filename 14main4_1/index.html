@@ -12,11 +12,12 @@
     <div id="block">Test</div>
     <p class="txt">1</p>
     <p class="txt">2</p>
-    skvbkb
-    <span class="txt">3
-        <div class="block">Блок внутри</div>
+    <span class="txt">
+        <div class="block" style = "display: none;">
+            Блок внутри
+        </div>
     </span>
-        
+     <input type="text" name="" value="Some">  
 
     <!-- <script src="jquery/jquery-3.7.1.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -24,7 +25,100 @@
     
     <script>
     ;(function($,undefined){
+       //ф-ия CSS - позволяет добавить различные св-ва к какому-либо обьекту
+       //к <div id="block" добавляем стили(задний фон:серый)
+       //$("#block").css("background","silver");
+       //если надо несколько св-тв:padding:10px—со всех четырёх
+       //сторон будет одинаковый отступ в 10 пик-ей
+       //$("#block").css("padding","10px");//не совсем удобно.Было бы удобней,
+       //если бы могли прописать все стили в одном месте:
+       //прописываем через {}
+       //$("#block").css({
+        //"width":"100px",
+        //"height":"100px",
+        //"border-radius":"5px"
+       //});
+       //также можем получать данные о CSS свойстве
+       //получаем значение св-ва padding и записываем ее в пер-ную
+       //var padding = $("#block").css("padding");
+       //alert(padding);//выводим ее через окошко
+       //console.log(padding);//тоже выводится
+       //var padding2 = $("#block").css("background");//хром автоматом добавляет свои стили
+       //alert(padding2);
+       //console.log(padding2);
        
+       //В jQuery можно прописывать не только одно св-во,а целый класс
+       //дальше будем прописывать в папке сss/style.css
+       //добавляем класс .test к нашему блоку
+       //$("#block").addClass("test");
+       //чтобы еще добавить стили можем скопировать и добавить новый стиль
+       //$("#block").addClass("test");
+       //но лучше прописать через пробел
+       //$("#block").addClass("test main");
+       //$("#block").removeClass("main");//ф-ия удаляет класс
+        //ф-ия проверяет есть ли этот класс
+        //принимает 1 пар-тр,возвращает true если клас есть
+        //прописывать через переменную
+        // var isClass = $("#block").hasClass("test");
+        // alert(isClass);
+
+//работа с атрибутами
+        //обращаемся к div у которого класс block,затем обращаемся к .attr(хотим взять атрибут)
+        //который называется class
+        //получаем значение атрибута class.Внашем случае это слово block
+        // var attr = $("div.block").attr("class");
+        // alert(attr);
+        //также можем добавить какой-либо атрибут
+        // $("div.block").attr("id","newOne");
+        //можно добавлять несколько атрибутов
+        // $("div.block").attr({
+        //     "id":"newOne",     
+        // });
+        //ф-ия которая позволяет удалять атрибут
+        //$("div.block").removeAttr("id");
+
+//если нужно работать со свойствами:<input type="text" name="" value="Some">
+//сделать ее не активным или активным ис-ем ф-ию prop()
+        //$("input").prop("disabled",true);//теперь в поле value я не могу ничего писать
+        //$("input").prop("disabled",false);//можно переустановить
+        //если не указывать 2й пар-тр,получаем значение
+        //alert($("input").prop("disabled"));
+//ф-ии кот. могут показать или спрятать обьект
+        //$("p").hide();
+        //$("p").show();
+        //$("p").toggle();//если обьект скрыт,то откроет,если открыт то скроет
+//ф-ии кот. позволяют показывать и скрывать эл-ты,но с анимацией
+        // $("p").slideUp();
+        // $("div.block").slideDown();
+        // $("div.block").slideToggle();
+
+        //$("div.block").fadeIn();//показывает обьект изменяя его прозрачность
+        //плавно скрываются "slow"-медленно,"fast"-быстро.можно прописывать во всех ф-ях
+        // $("p").fadeOut("slow");
+        // $("p").fadeToggle("slow");
+
+//ф-ии позв. узнавать ширину и высоту обьекта
+        // alert($("input").width());
+        // alert($("input").height());
+//ф-ии чтобы брать инфу из текстового поля и блоков
+        //val()-берет ин-ю из value
+        //alert($("input").val());
+        //теперь из блока
+       //alert($(".block").text());//html будет проигнорировать
+        //alert($("span.txt").text());
+        //alert($("span.txt").html());//выводит html
+
+        //если хотим установить текст или html
+        //$("span.txt").text("Hi");
+        //$("span.txt").text("<b>Hi</b>");//выводится текстом
+        $("span.txt").html("<b>Hi</b>");//выводится HTML
+
+19.12
+
+
+
+
+
     })(jQuery);
     </script>
 </body>

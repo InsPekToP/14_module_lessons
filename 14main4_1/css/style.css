@@ -1,0 +1,6 @@
+/* называем класс */
+.test{
+    background: silver;/*задний фон*/
+    border: 2px solid silver;/*обводка*/
+    padding: 20px;/*внутрение отступы*/
+}
