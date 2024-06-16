@@ -7,11 +7,16 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+<!-- 14main3_1 -->
     <div id="block">Test</div>
+    <div style="background: red;padding: 10px;"></div>
     <p class="txt">1</p>
     <p class="txt">2</p>
-    <p class="txt">3</p>
+    skvbkb
+    <span class="txt">3
+        <div class="block">sgsdg</div>
+    </span>
+        
 
     <!-- <script src="jquery/jquery-3.7.1.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -20,11 +25,37 @@
     $(обращаемся к jQuery),дальше # - вибираем эл-нт.И дальше какой эл-нт "block".
     Потом идет ф-ия .hide() - скрывает эл-нт
     Если зайти в консоле в Эл-ты,то будет прописано display: none(не показывает)  -->
-02.44
+
     <script>
 
-    $("#block").hide();
+    // $("#block").hide();
+    //$(".txt").hide(); //также можно выбрать и по классу(не важно какой класс <p>-абзац,<span>-)
+    //$("p.txt").hide();//если надо выбрать только абзацы,у кот. класс .txt
+    //$("p.txt,#block").hide();//если надо вырать несколько,прописываем через зяпятую
+    //$("div:empty").hide();//выбираем все div,кот. пустые
+    //$("div:not(:empty").hide();//div кот. не пустые
+//Еще кроме CSS можем польз-ся jQuery:
+    //$("div").first().hide();//выбор 1го div
+    //$("div").last().hide();//последний div
+    //$("div").next().hide();//следующий div(получается сначало нашли div block,он скрыл div style,
+//а он скрыл <p class="txt">1</p>,поэтому div style и  <p class скрыты)
+    //$("span").prev().hide();//выбирает предыдущий обьект(нашли обьект span и скрыли <p class="txt">2</p> )
+//ищет только обьекты,текст не считается
+    //$(".block").parent().hide();//обращение к родительскому классу(скрыли не
+//<div class="block">sgsdg,а <span class="txt">3)
+    //jQuery(".txt").children().hide();//нах. дочерний эл-нт(искали <span class="txt">3,затем взяли
+//дочерний эл-нт <div class="block">sgsdg</div> и скрыли его)
 
+//вместо знака $ можем прописывать jQuery.Могут быть проблемы при использовании биб-ки написаной на jQuery
+//Т.к. не всегда можем знать какой символ ис-ся в этой биб-ке.
+//Чтобы не путаться можем ис-ть анонимную ф-ию:
+    // ;(function($,undefined){
+    //     //теперь можем писать и $ и jQuery
+    //     //jQuery(".txt").children().hide();
+    //     //$(".txt").children().hide();
+
+    // })(jQuery);
+    
     </script>
 </body>
 </html>
