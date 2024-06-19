@@ -4,3 +4,9 @@
     border: 2px solid silver;/*обводка*/
     padding: 20px;/*внутрение отступы*/
 }
+
+
+#block{
+    width: 100px;
+    background: silver;
+}
