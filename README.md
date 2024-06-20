@@ -15,7 +15,7 @@
     - [*Обработчик событий в jQuery*][5]
 
 - **14main6_1**
-    - [*Создание веб-сайта*][5]
+    - [*Создание веб-сайта*][6]
 
 
 
@@ -24,4 +24,4 @@
 [3]:https://github.com/InsPekToP/14_module_lessons/blob/master/14main3_1/index.html
 [4]:https://github.com/InsPekToP/14_module_lessons/blob/master/14main4_1/index.html
 [5]:https://github.com/InsPekToP/14_module_lessons/blob/master/14main5_1/index.html
-[6]:
+[6]:https://github.com/InsPekToP/14_module_lessons/blob/master/14main6_1/index.html
