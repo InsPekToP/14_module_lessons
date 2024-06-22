@@ -1,12 +1,42 @@
-/* называем класс */
-.test{
-    background: silver;/*задний фон*/
-    border: 2px solid silver;/*обводка*/
-    padding: 20px;/*внутрение отступы*/
+/* Сначало надо выполнить подключение общего шрифта,кот. будет на сайте */
+/*переходим на fonts.google.com*/
+/*вибираем шрифт monserat*/
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200,400,500,700&display=swap&subset=cyrillic-ext'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+/*добавляем общие стили,а затем добавим стили для шампки*/
+*{
+    margin: 0;/*отступ внушний*/
+    padding: 0;/*отступ внутрений*/
+    outline: none;/*обводка(лучше прописывать всегда)*/
 }
 
+body{
+    background: #fafafa;
+    font-size: 16px;/*размер шрифта*/
+    font-family: "Montserrat", sans-serif;/*общий шрифт*/
+    font-weight: 400;/*ширина шрифта по умолчанию*/
+}
 
-#block{
-    width: 100px;
-    background: silver;
+/*общие стили для ссылок*/
+
+a{
+    text-decoration:none;/*без нижнего подчеркивания*/
+    transition: color 600ms ease ;/*делаем анимацию,кот.применяется к цвету
+    и ф-ией ease - разная плавность перехода*/
+}
+
+img{max-width: 100%;}/*все картинки не будут больше 100% чем родительский эл-нт*/
+/*не будут вылазить за рамки родильского эл-та
+
+/*шапка*/
+header{
+    width: 90%;/*ширина*/
+    padding: 20px 5%;/*отступы:20px -по вертикали,5% - по горизонтали*/
+    background: #fff;
+    display: flex;/*выравнивание*/
+    justify-content: space-between;/*расположение контента-по бокам*/
 }

@@ -1,14 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JavaScript</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- так можно подключать fontawesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css" crossorigin="anonymous"> -->
+    <!-- так тоже можно подключать fontawesome(через свой кабинет) -->
+    <script src="https://kit.fontawesome.com/c268de5177.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <!-- 14main6_1 -->
 <!-- Создание веб-сайта  -->
+    <!-- Создаем шапку тег <header></header> -->
+     <!-- прописать класс в теге span:span.logo -->
+     <header>
+        <span class="logo">Washoo</span>
+        <div class="nav">
+                    <!-- ссылка: -->
+            <a href="#">Главная</a>
+            <a href="#">Про компанию</a>
+            <a href="#">Услуги</a> 
+        </div>
+        <span class="menu" id="show-menu">
+            <!-- тут создаем кнопку,кот. будет выезжать справа на сайте -->
+            <!-- надо создать атрибут id-т.к. мы будем его выбирать и вешать функционал -->
+            <!-- можно создать кнопку,но лучше из fontawesomome.com выбрать иконку -->
+            <i class="fa-solid fa-bars"></i>
+            <!-- чтобы это все работало надо подключить css файл для работы fontawesome -->
+            <!-- чтобы подключить,надо зайти на сайт fontawesome,зарегистрироваться,и на эмейл прийдет ссылка
+            для подключения:<script src="https://kit.fontawesome.com/c268de5177.js" crossorigin="anonymous"></script> -->
+            <!-- теперь переходим в файл style.css -->
+            
 
-
+        </span>
+     </header>
+     <!-- так тоже можно подключать fontawesome(грузится в конце) -->
+    <!-- <script src="https://kit.fontawesome.com/c268de5177.js" crossorigin="anonymous"></script> -->
+    <script src="js/index.js"></script>
 </body>
 </html>
