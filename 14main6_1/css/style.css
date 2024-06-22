@@ -62,9 +62,24 @@ header > .nav a{
 }
 
 /*эфект при наведении*/
-header > .nav a:hover{color: #4f4e4e;}
+header > .nav a:hover,
+header > .menu:hover {color: #4f4e4e;}
 
 /*стили для меню*/
 header > .menu {
     cursor: pointer;/*активный курсор при наведении*/
+    color: #a3a3a3;
+    font-size: 23px;
 }
+/*теперь делаем картинку на весь экран*/
+.full-page{
+    height: 95vh;/*95 процентов высоты экрана*/
+    background: url('../img/main-bg.jpg') no-repeat center center ; /*не повторяется,центр по вертикали и горизонтали*/
+    background-attachment: fixed;/*фиксируем задний фон*/
+    background-size: cover;/*растягиваем на весь экран*/
+    background-blend-mode: multiply;/*сочетание двух слоев*/
+    background-color: #3b3b3b;/*сочетается с серым,поэтому получается затемненный*/
+    text-align: center;/*текст по центру*/
+    color: #fff;
+}
+/*работаем с текстом*/
