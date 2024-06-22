@@ -7,7 +7,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
-/*добавляем общие стили,а затем добавим стили для шампки*/
+/*добавляем общие стили,а затем добавим стили для шапки*/
 *{
     margin: 0;/*отступ внушний*/
     padding: 0;/*отступ внутрений*/
@@ -39,4 +39,32 @@ header{
     background: #fff;
     display: flex;/*выравнивание*/
     justify-content: space-between;/*расположение контента-по бокам*/
+    align-items: center;/*центрируем по вертикали*/
+}
+
+/*далее добавляем стили,для тех тегов что в внутри*/
+
+header > .logo{
+    font-size: 25px;/*размер шрифта*/
+    font-weight: 700;/*жирность*/
+}
+
+/*передвигаем Главная Услуги Про компанию ближе к центру*/
+header> .nav{
+    position: relative;
+    left: -50px;
+}
+/*теперь обращаемся ко всем ссылкам,что внутри*/
+header > .nav a{
+    margin: 0 15px;/*отступы спарава и слева по 15px*/
+    display: inline-block;/*что то про расположение*/
+    color: #a3a3a3;
+}
+
+/*эфект при наведении*/
+header > .nav a:hover{color: #4f4e4e;}
+
+/*стили для меню*/
+header > .menu {
+    cursor: pointer;/*активный курсор при наведении*/
 }
