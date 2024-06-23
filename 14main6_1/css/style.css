@@ -72,7 +72,8 @@ header > .menu {
     font-size: 23px;
 }
 /*теперь делаем картинку на весь экран*/
-.full-page {
+.full-page,
+.bg-fixed {
     height: 95vh;/*95 процентов высоты экрана*/
     background: url('../img/main-bg.jpg') no-repeat center center ; /*не повторяется,центр по вертикали и горизонтали*/
     background-attachment: fixed;/*фиксируем задний фон*/
@@ -98,7 +99,8 @@ header > .menu {
     color: #ccc;
 }
 /*работаем с кнопкой*/
-.full-page button {
+.full-page button,
+.bg-fixed button {
     /* Падинги (свойство padding ) — это внутренние отступы от границ элемента до его содержимого.
      Маржины (свойство margin ) — это внешние отступы от границ элемента до соседних элементов. */
     padding: 15px 25px;/*тоже отступы?-15px по вертикали,25-по горизонтали*/
@@ -114,18 +116,70 @@ header > .menu {
 
 
 /*сначало передвинем саму стрелочку*/
-.full-page button i {
+.full-page button i,
+.bg-fixed button i {
     margin-left: 5px;/*отступ слева*/
     transition: margin 600ms ease;/*плавность перехода*/
 }
 
 /*эфект при наведении на кнопку*/
-.full-page button:hover {background: #ff9800;}
+.full-page button:hover,
+.bg-fixed button:hover {background: #ff9800;}
 
 /*теперь хотим,чтобы стрелочка отьезжала немного вбок*/
 /*эффект при наведении на стрелочку?*/
-.full-page button:hover i {
+.full-page button:hover i,
+.bg-fixed button:hover i {
     margin-left: 15px;
     color: #fff;
 }
 
+/*прописываем стили для картинок*/
+.features {
+    display: flex;/*выравнивание*/
+    justify-content: space-between;/*разделяем пространство 2 слева,1 справа*/
+    width: 60%; /*ширина 60%*/
+    margin-left: 20%;
+}
+/*стили для дивов*/
+.features > div{
+    width: 300px;/*ширина*/
+    text-align: center;/*выравнивание по центру*/
+    margin: 50px 10px;
+}
+.features > div img {
+    width: 80px;
+    margin-bottom: 10px;/*низ эл-та*/
+}
+/*стили для заголовков*/
+.features > div h4 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;/*отступ внизу заголовка*/
+    color: #454545;
+}
+.features > div p {font-weight: 200;}
+
+/*стили для подписки*/
+/*стили начинают повторятся,поэтому можем через зяпятую прописать в .full-page*/
+/*тут укажем только height:300px;*/
+.bg-fixed {
+    height:300px;
+}
+/*стили для заголовков*/
+.bg-fixed h3 {
+    font-size: 25px;
+    padding-top: 130px;
+    margin-bottom: 20px;
+}
+/*input поле*/
+.bg-fixed input {
+    padding: 14px 20px;
+    width: 300px;
+    font-size: 14px;
+    border: 0;
+    border-radius: 5px;
+    background: #fafafa;
+}
+/*стили для кнопки подписаться такие же как узнать больше,
+поэтому через запятую прописываем в .full-page button*/
