@@ -193,10 +193,27 @@ footer{
     align-items: center;/*дочерние эл-ты по центру(не совсем понятно)*/
 }
 /*стили для кнопки вверх*/
-footer .up-btn{
+footer .up-btn,
+footer .social div{
     width: 50px;/*высота*/
     height: 50px;/*ширина*/
     text-align: center;/*текст по центру*/
     line-height: 50px;/*высота линейного блока*/
-    
+    border-radius: 50%;
+    background: #eee;
+    border: 1px solid silver;/*обводка круг с радиусом 1px и цветом серым*/
+    cursor: pointer;/*активный курсор при наведении*/
+    color: #3b3b3b;
+    transition: transform 600ms ease;/*делаем для эффекта при наведении(чтобы плавно было)*/
+}
+/*добавляем эффект при наведении*/
+footer .up-btn:hover,
+footer .social div:hover {
+    transform: translateY(-10px);/*меняет свое положение по оси Y вверх(-10px)*/
+}
+/*стили для дивов в футере*/
+footer .social div{
+    display: inline-block;/*чтобы все распологались в 1 ряд*/
+    margin-left: 15px;/*отступы слева*/
+    /*чттобы были одинаковые стили с кнопкой через зяпятую прописываем в footer .up-btn - footer div*/
 }
