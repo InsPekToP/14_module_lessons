@@ -19,7 +19,7 @@ $(document).scroll(function(){
         $("header").removeClass("fixed");    
 });
 
-//вывод прокрутки в еонсоль(не онлайн)
+//вывод прокрутки в консоль(не онлайн)
 // var scrol = $(document).scrollTop();
 // console.log(scrol);
 
