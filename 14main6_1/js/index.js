@@ -50,3 +50,20 @@ $(".up-btn").on("click",function(){
         scrollTop:0
     },'slow');
 });
+
+//теперь делаем обработчик на кнопку show-menu,чтобы при нажатии менялось
+//в кнопке  hidden-menu right: -300px; на right: 0;
+//выбираем hidden-menu и применяем ф-ию animate(св-во "right":0 через 500мс )
+$("#show-menu").on("click",function(){
+    $("#hidden-menu").animate({
+        "right":0
+    },500);
+});
+
+//теперь тоже самое для кнопки close
+$("#hidden-menu .close").on("click",function(){
+    $("#hidden-menu").animate({
+        //когда пишем в пикселях,надо указывать кавычки
+        "right":"-300px"
+    },200);
+});
