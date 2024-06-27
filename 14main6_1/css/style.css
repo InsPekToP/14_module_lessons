@@ -82,10 +82,12 @@ header > .menu {
     border-bottom: 10px solid silver;/*чтобы мы различали где шапка а где разделение 
     сайта(обводка - 2px) (чтобы цвета не сливались)*/ /*можно поиграться со стилями*/ 
     background: #9D9D9D;
+    z-index: 2;/*чтобы карусель не наезжала на шапку(можно указать 10,
+    но я не знаю зачем так много)*/
 }
 /*стили ддя меню(список).Обращаемся к div у кот. есть hiden-menu*/
 #hidden-menu{
-    width: 300px;/*ширина*/
+    width: 200px;/*ширина*/
     position: fixed;/*это нужно чтобы в любом месте открытия оно показывалось*/
     top: 0;/*сверху отступ*/
 /*при закрузки страницы хотим,чтобы этого меню не было видно,для этого прописываем
@@ -262,6 +264,40 @@ header > .menu {
     color: #454545;
 }
 .features > div p {font-weight: 200;}
+
+/*стили для карусели(блока в целом)*/
+.galery {
+    width: 70%;/*ширина*/
+    margin: 50px 15%;/*отступы*/
+    position: relative;/*расположение*/
+    left:250px;
+}
+/*стили для кнопок*/
+
+.galery .arrow-prev,
+.galery .arrow-next{
+    font-size: 28px;
+    position: absolute;/*позиционирование относ блока galery*/
+    top: 50%;/*где находится*/
+    cursor: pointer;
+    transition: all 600ms ease;
+}
+/*стили для разволожения этих кнопок*/
+.galery .arrow-prev {left: -50px;}
+.galery .arrow-next {right: 32%;}
+
+/*эффекты при наведении*/
+.galery .arrow-prev:hover,
+.galery .arrow-next:hover {
+    transform: scale(1.4);/*увеличаваем кнопку в 1,4 раза*/
+}
+
+
+/*стили для div*/
+.galery div {
+    margin-top: 15px;
+    margin-right: 50px;
+}
 
 /*стили для подписки*/
 /*стили начинают повторятся,поэтому можем через зяпятую прописать в .full-page*/

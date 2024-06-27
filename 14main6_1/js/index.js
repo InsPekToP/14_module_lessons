@@ -69,3 +69,31 @@ $("#hidden-menu .close").on("click",function(){
 });
 
 
+//прописываем,что ф-ии для плагина должны применятся,когда страница загружена
+//.ready - ф-ия,чтобы грузить slick в конце
+//в док-ции по slick написано: $('.single-item').slick(); чтобы подключить его
+//в нашем случае вместо .single-item' пишем #slider
+//НЕПОНЯТНО ПОЧЕМУ ВМЕСТО . пишем #
+//внутри ф-ии .slick можем прописывать разные пар-ры из док-ии
+$(document).ready(function(){
+    $('#slider').slick({
+        dots:false,//точки под слайдами
+//теперь чтобы поработать с кнопками вперед назад,надо зайти в setting 
+//и найти prevArrow и nextArrow и поменять им св-ва
+        //prevArrow:'<button type="button" class="slick-next">Next</button>'//значение по умолчанию
+        //теперь переписываем его
+        prevArrow: '<div class="arrow-prev"><i class="fa-solid fa-arrow-left"></i></div>',
+        //тоже самое для стрелки вправо
+        nextArrow: '<div class="arrow-next"><i class="fa-solid fa-arrow-right"></i></div>',
+        //указывает будет ли слайды бесконечны(по умолч-true)
+        infinite:true,
+        //сколько слайдов в одном ряду(по умолчанию 1,перетягивается по 1)
+        slidesToShow:1,
+        slidesToScroll:1,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+});
