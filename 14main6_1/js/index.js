@@ -67,3 +67,5 @@ $("#hidden-menu .close").on("click",function(){
         "right":"-300px"
     },200);
 });
+
+
