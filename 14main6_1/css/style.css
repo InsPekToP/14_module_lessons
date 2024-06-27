@@ -81,7 +81,9 @@ header > .menu {
     left: 0; 
     border-bottom: 10px solid silver;/*чтобы мы различали где шапка а где разделение 
     сайта(обводка - 2px) (чтобы цвета не сливались)*/ /*можно поиграться со стилями*/ 
-    background: #9D9D9D; }
+    background: #9D9D9D;
+}
+
 
 /*попытка вывести плавно ПОЛУЧИЛОСЬ!!!!!!!!!!(осталось только подправить под сайт*/
 /* .fixed {
@@ -109,7 +111,6 @@ header > .menu {
         opacity: 1
     }
 }
-
 @keyframes showHeader {
     from {
         top: -70px;
